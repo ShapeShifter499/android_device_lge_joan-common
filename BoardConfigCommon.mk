@@ -170,7 +170,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/prebuilt/etc/fstab.joan
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/prebuilt/vendor/etc/fstab.joan
 
 # RIL
 TARGET_RIL_VARIANT := caf
