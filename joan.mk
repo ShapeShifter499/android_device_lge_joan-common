@@ -21,10 +21,9 @@ COMMON_PATH := device/lge/joan-common
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay \
-    $(COMMON_PATH)/overlay-lineage
+#    $(COMMON_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(COMMON_PATH)/overlay-lineage/lineage-sdk
 
 # Properties
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
