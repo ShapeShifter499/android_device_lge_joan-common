@@ -46,7 +46,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.handset_rx_type=DEFAULT \
     persist.spkr.cal.duration=0 \
     persist.audio.dual_audio=ON \
-    vendor.audio_hal.period_size=480
+    vendor.audio_hal.period_size=480 \
+    ro.vendor.fm.use_audio_session=true
+
+
 
 # Audio - DAC
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -74,6 +77,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.bt.a2dp.aac_disable=true \
     persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac \
     vendor.qcom.bluetooth.soc=cherokee \
+    vendor.bluetooth.soc=cherokee \
     qcom.bluetooth.soc=cherokee \
     ro.bluetooth.a4wp=false
 
@@ -108,6 +112,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
 
+# FM
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.hw.fm.internal_antenna=true
+
 # HDR
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qcom.hdr.config=/system/vendor/etc/hdr_tm_config.xml
@@ -136,11 +144,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.fw.bg_apps_limit=48 \
     sched.colocate.enable=1 \
     sys.games.gt.prof=1
-    
+
 # QTI
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.gt_library=libqti-gt.so \
-    ro.vendor.at_library=libqti-at.so 
+    ro.vendor.at_library=libqti-at.so
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
