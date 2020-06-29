@@ -106,6 +106,9 @@ USE_CAMERA_STUB := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
+# Custom Apns for Sprint
+CUSTOM_APNS_FILE := $(COMMON_PATH)/sprint_apns.xml
+
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
