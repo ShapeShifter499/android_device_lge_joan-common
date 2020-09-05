@@ -569,6 +569,26 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.lge.hardware.property</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IProperty</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IProperty/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.soi</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISoi</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISoi/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.lge.hardware.sysnode</name>
         <transport>hwbinder</transport>
         <version>1.0</version>

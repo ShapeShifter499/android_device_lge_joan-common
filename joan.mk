@@ -290,6 +290,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
@@ -306,6 +307,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-ims.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-ims.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-joan.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-joan.xml
 
 # Power
@@ -356,10 +358,15 @@ PRODUCT_COPY_FILES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-    telephony-ext
+    telephony-ext \
+    ims-ext-common
 
 PRODUCT_BOOT_JARS += \
-    telephony-ext
+    telephony-ext \
+    ims-ext-common
+
+#PRODUCT_BOOT_JARS += \
+#    lg-framework
 
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \

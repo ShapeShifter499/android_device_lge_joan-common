@@ -235,3 +235,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Waterproof
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.support.waterproof=true
+
+# IMS
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.product.lge.ims.volte_open=1 \
+persist.product.lge.data.iwlan=1 \
+ro.vendor.lge.feature.ims=true \
+ro.vendor.lge.feature.sms_ims=true
+#ro.vendor.lge.swversion_svn=29
+#ro.vendor.lge.feature.laop=true
+#ro.vendor.lge.laop=1
